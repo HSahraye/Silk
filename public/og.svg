@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0A0A0B"/>
+      <stop offset="100%" stop-color="#141417"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#F4ECD3"/>
+      <stop offset="60%" stop-color="#D9BF73"/>
+      <stop offset="100%" stop-color="#8C6418"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#D9BF73" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#D9BF73" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(80,200)">
+    <rect width="56" height="56" rx="12" fill="url(#gold)"/>
+    <text x="28" y="40" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="600" fill="#0A0A0B">S</text>
+    <text x="78" y="40" font-family="Georgia, serif" font-size="34" fill="#FAFAF7">Silk</text>
+  </g>
+  <text x="80" y="360" font-family="Georgia, serif" font-size="80" fill="#FAFAF7">The executive</text>
+  <text x="80" y="445" font-family="Georgia, serif" font-size="80" fill="url(#gold)">gifting standard.</text>
+  <text x="80" y="520" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#A1A1AA">Architectural baklava · Hand-layered · Built for the moments that matter</text>
+</svg>
