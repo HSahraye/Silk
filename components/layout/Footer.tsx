@@ -93,17 +93,17 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-line pt-8 sm:flex-row sm:items-center">
-          <div className="text-xs text-ink-subtle">
+          <div className="text-xs text-ink-muted">
             © {new Date().getFullYear()} Silk Gifting, Inc. Crafted in {SITE.city}, {SITE.region}.
           </div>
-          <div className="flex gap-5 text-xs text-ink-subtle">
-            <Link href="/legal/privacy" className="hover:text-ink-muted">
+          <div className="flex gap-5 text-xs text-ink-muted">
+            <Link href="/legal/privacy" className="transition-colors hover:text-ink">
               Privacy
             </Link>
-            <Link href="/legal/terms" className="hover:text-ink-muted">
+            <Link href="/legal/terms" className="transition-colors hover:text-ink">
               Terms
             </Link>
-            <Link href="/legal/accessibility" className="hover:text-ink-muted">
+            <Link href="/legal/accessibility" className="transition-colors hover:text-ink">
               Accessibility
             </Link>
           </div>

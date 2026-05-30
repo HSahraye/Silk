@@ -1,7 +1,9 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { Section, SectionEyebrow } from '@/components/ui/Section';
 import { Reveal } from '@/components/ui/Reveal';
+import { fadeUp, viewportOnce } from '@/lib/motion';
 import { TheGift } from '@/components/visuals/EditorialImages';
 
 const reasons = [
@@ -51,17 +53,23 @@ export function WhyRemember() {
 
             <ul className="mt-12 space-y-10">
               {reasons.map((r, i) => (
-                <Reveal key={r.n} delay={i * 0.08}>
-                  <li className="grid grid-cols-[auto_1fr] items-start gap-6">
-                    <div className="font-mono text-xs uppercase tracking-widest text-gold-300">
-                      {r.n}
-                    </div>
-                    <div>
-                      <h3 className="font-display text-2xl text-ink balance">{r.title}</h3>
-                      <p className="mt-3 max-w-lg text-ink-muted pretty">{r.body}</p>
-                    </div>
-                  </li>
-                </Reveal>
+                <motion.li
+                  key={r.n}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={viewportOnce}
+                  variants={fadeUp}
+                  transition={{ delay: i * 0.08 }}
+                  className="grid grid-cols-[auto_1fr] items-start gap-6"
+                >
+                  <div className="font-mono text-xs uppercase tracking-widest text-gold-300">
+                    {r.n}
+                  </div>
+                  <div>
+                    <h3 className="font-display text-2xl text-ink balance">{r.title}</h3>
+                    <p className="mt-3 max-w-lg text-ink-muted pretty">{r.body}</p>
+                  </div>
+                </motion.li>
               ))}
             </ul>
           </div>
