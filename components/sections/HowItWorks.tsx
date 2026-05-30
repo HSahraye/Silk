@@ -4,10 +4,26 @@ import { motion } from 'framer-motion';
 import { Section, SectionEyebrow } from '@/components/ui/Section';
 
 const steps = [
-  { n: '01', title: 'Select', body: 'Choose a collection — Origin, Executive, or custom-branded for your team.' },
-  { n: '02', title: 'Personalize', body: 'Add a dedication card, recipient list, and delivery window. CSV upload for bulk.' },
-  { n: '03', title: 'Deliver', body: 'White-glove handoff in the Bay Area. Cold-chain national shipping in Q3.' },
-  { n: '04', title: 'Impress', body: 'We track delivery confirmations and send you a recipient response summary.' },
+  {
+    n: '01',
+    title: 'Choose',
+    body: 'A single box, a quiet subscription, or a custom-branded collection for your team.',
+  },
+  {
+    n: '02',
+    title: 'Inscribe',
+    body: 'A handwritten card, a recipient list, the date you\'d like it to arrive — quietly.',
+  },
+  {
+    n: '03',
+    title: 'Arrive',
+    body: 'Delivered with the same care used to create it. White-glove in the Bay Area, climate-controlled nationally.',
+  },
+  {
+    n: '04',
+    title: 'Remembered',
+    body: 'A small confirmation reaches you. The bigger one usually reaches you later, from them.',
+  },
 ];
 
 export function HowItWorks() {
@@ -17,12 +33,11 @@ export function HowItWorks() {
         <div className="max-w-2xl">
           <SectionEyebrow>How it works</SectionEyebrow>
           <h2 className="mt-4 font-display text-display-lg balance">
-            From decision to delivered — four steps.
+            From decision to arrival, with very little in between.
           </h2>
         </div>
 
         <div className="mt-16 relative">
-          {/* Connecting line */}
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -41,8 +56,8 @@ export function HowItWorks() {
                 transition={{ delay: i * 0.12, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                 className="relative"
               >
-                <div className="relative z-10 flex h-[84px] w-[84px] items-center justify-center rounded-full border border-line bg-bg-raised">
-                  <span className="font-mono text-sm tracking-widest text-gold-200">{s.n}</span>
+                <div className="relative z-10 flex h-[84px] w-[84px] items-center justify-center rounded-full border border-line bg-bg-raised ember-edge">
+                  <span className="font-mono text-sm tracking-widest text-gold-300">{s.n}</span>
                 </div>
                 <h3 className="mt-6 font-display text-2xl text-ink balance">{s.title}</h3>
                 <p className="mt-3 max-w-xs text-ink-muted pretty">{s.body}</p>

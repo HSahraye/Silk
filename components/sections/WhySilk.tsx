@@ -14,13 +14,13 @@ type Row = {
 };
 
 const rows: Row[] = [
-  { attribute: 'Visually unforgettable', cookies: false, chocolate: false, fruit: false, silk: true },
-  { attribute: 'Shelf life > 14 days', cookies: false, chocolate: true, fruit: false, silk: true },
-  { attribute: 'Ships in branded packaging', cookies: false, chocolate: 'Sometimes', fruit: false, silk: true },
-  { attribute: 'Custom dedication card', cookies: 'Limited', chocolate: 'Limited', fruit: false, silk: true },
-  { attribute: 'Hand-crafted, not extruded', cookies: false, chocolate: false, fruit: false, silk: true },
-  { attribute: 'Bay-Area same-week', cookies: true, chocolate: true, fruit: true, silk: true },
-  { attribute: 'White-glove fulfillment', cookies: false, chocolate: false, fruit: false, silk: true },
+  { attribute: 'Opens like an occasion', cookies: false, chocolate: false, fruit: false, silk: true },
+  { attribute: 'Keeps three weeks beautifully', cookies: false, chocolate: true, fruit: false, silk: true },
+  { attribute: 'Arrives in a keepsake box', cookies: false, chocolate: 'Sometimes', fruit: false, silk: true },
+  { attribute: 'Handwritten card included', cookies: 'Sometimes', chocolate: 'Sometimes', fruit: false, silk: true },
+  { attribute: 'Hand-folded, not extruded', cookies: false, chocolate: false, fruit: false, silk: true },
+  { attribute: 'Bay-Area next-day', cookies: true, chocolate: true, fruit: true, silk: true },
+  { attribute: 'Single-origin ingredients', cookies: false, chocolate: 'Some', fruit: false, silk: true },
 ];
 
 function Cell({ value, highlight }: { value: boolean | string; highlight?: boolean }) {
@@ -32,7 +32,7 @@ function Cell({ value, highlight }: { value: boolean | string; highlight?: boole
       <span
         className={
           highlight
-            ? 'inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-gold-200 to-gold-500 text-bg'
+            ? 'inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-gold-200 to-gold-500 text-bg shadow-glow'
             : 'inline-flex h-7 w-7 items-center justify-center rounded-full border border-line text-ink'
         }
       >
@@ -49,31 +49,31 @@ function Cell({ value, highlight }: { value: boolean | string; highlight?: boole
 
 export function WhySilk() {
   return (
-    <Section id="why-silk">
+    <Section id="why-silk" className="border-t border-line">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <SectionEyebrow>Why Silk</SectionEyebrow>
+            <SectionEyebrow>The honest comparison</SectionEyebrow>
             <h2 className="mt-4 font-display text-display-lg balance">
-              Most gifts are forgettable.
+              Most gifts get put away.
               <br />
-              <span className="gold-text">Silk isn't.</span>
+              <span className="gold-text">Silk gets photographed.</span>
             </h2>
             <p className="mt-6 max-w-md text-ink-muted pretty">
-              We benchmarked Silk against the categories executives default to. The gap isn't
-              taste — it's intent. Everything below is a deliberate design choice.
+              We held Silk next to every default a busy executive reaches for. The gap isn&rsquo;t
+              taste &mdash; it&rsquo;s how much the moment is allowed to last.
             </p>
           </div>
 
           <div className="lg:col-span-7">
             <Reveal>
-              <div className="overflow-hidden rounded-3xl border border-line bg-bg-raised/40 backdrop-blur">
+              <div className="overflow-hidden rounded-3xl border border-line bg-bg-raised/40 backdrop-blur ember-edge">
                 <div className="grid grid-cols-5 items-center gap-2 border-b border-line bg-bg-subtle/70 px-5 py-4 text-xs uppercase tracking-widest text-ink-subtle sm:px-6">
-                  <div className="col-span-1">Attribute</div>
+                  <div className="col-span-1">Quality</div>
                   <div className="text-center">Cookies</div>
                   <div className="text-center">Chocolate</div>
-                  <div className="text-center">Fruit basket</div>
-                  <div className="text-center text-gold-200">Silk</div>
+                  <div className="text-center">Fruit</div>
+                  <div className="text-center text-gold-300">Silk</div>
                 </div>
                 <ul>
                   {rows.map((row, i) => (

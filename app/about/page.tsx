@@ -80,7 +80,7 @@ export default function AboutPage() {
                 <em> texted about it</em>. They forwarded photos. They asked where to send one
                 themselves. We weren't competing with other baklava brands — we were
                 competing with cookie tins, gift baskets, and the seven other things in the
-                CEO\'s mailroom that morning.
+                CEO&rsquo;s mailroom that morning.
               </p>
               <p>
                 So we rebuilt. New sourcing. Industrial-designed packaging. A pastry training

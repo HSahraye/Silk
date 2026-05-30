@@ -7,11 +7,11 @@ import { ButtonLink } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 
 const audiences = [
-  { icon: Users, label: 'Executive Assistants', sub: 'Repeat-purchase ordering, calendar holds, recipient management.' },
-  { icon: HeartHandshake, label: 'People Ops & HR', sub: 'New hire welcomes, anniversaries, milestone moments.' },
-  { icon: BriefcaseBusiness, label: 'VC & PE Firms', sub: 'Portfolio gifting, LP outreach, founder-day-one boxes.' },
-  { icon: Scale, label: 'Law Firms', sub: 'Client thank-yous, deal closes, partner promotions.' },
-  { icon: Building2, label: 'Enterprise Sales', sub: 'Account-based gifting tied to pipeline stages.' },
+  { icon: Users, label: 'Executive Assistants', sub: 'Repeat sends, calendar holds, recipient management — quietly handled.' },
+  { icon: HeartHandshake, label: 'People & Culture', sub: 'New hires, anniversaries, milestones. The moments worth marking.' },
+  { icon: BriefcaseBusiness, label: 'Venture firms', sub: 'Founder welcomes, LP outreach, portfolio gestures sent at the right hour.' },
+  { icon: Scale, label: 'Law firms', sub: 'Client thank-yous, deal closes, the moves that deserve more than chocolates.' },
+  { icon: Building2, label: 'Enterprise teams', sub: 'Account-based gifting tied to the moments that move pipeline.' },
 ];
 
 export function CorporateBand() {
@@ -20,21 +20,21 @@ export function CorporateBand() {
       <div className="mx-auto max-w-[1200px] px-5 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <SectionEyebrow>Corporate Gifting</SectionEyebrow>
+            <SectionEyebrow>Corporate gifting</SectionEyebrow>
             <h2 className="mt-4 font-display text-display-lg balance">
-              The alternative to boring corporate gifts.
+              The gift your clients will still mention next quarter.
             </h2>
             <p className="mt-5 text-lg text-ink-muted pretty">
-              Bulk ordering, custom branding, recipient routing, white-glove fulfillment. Built
-              for teams who measure gifts in opened doors, not opened boxes.
+              Bulk orders, custom branding, recipient routing, white-glove arrival. Built for
+              teams who measure their gifting in opened doors — not opened boxes.
             </p>
           </div>
           <div className="flex gap-3">
             <ButtonLink href="/corporate" variant="primary" arrow>
-              Explore Corporate
+              Explore corporate
             </ButtonLink>
             <ButtonLink href="/contact?type=corporate" variant="secondary">
-              Talk to sales
+              Talk to us
             </ButtonLink>
           </div>
         </div>
@@ -44,7 +44,7 @@ export function CorporateBand() {
             <Reveal key={a.label} delay={i * 0.05}>
               <Card>
                 <CardBody className="flex flex-col gap-4">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-bg text-gold-200">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-bg text-gold-300">
                     <a.icon className="h-4 w-4" />
                   </span>
                   <div>
