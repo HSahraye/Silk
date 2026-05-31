@@ -18,10 +18,10 @@ export const SITE = {
 } as const;
 
 export const NAV = [
-  { label: 'Experience', href: '/experience' },
+  { label: 'Collection', href: '/collection' },
   { label: 'Corporate', href: '/corporate' },
   { label: 'Subscriptions', href: '/subscriptions' },
-  { label: 'Our Process', href: '/process' },
-  { label: 'About', href: '/about' },
+  { label: 'The Story', href: '/story' },
+  { label: 'Process', href: '/process' },
   { label: 'FAQ', href: '/faq' },
 ] as const;

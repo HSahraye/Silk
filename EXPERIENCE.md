@@ -209,11 +209,31 @@ npm run dev            # visit http://localhost:3000/experience
 ---
 
 **Built:**
-- `/app/experience/page.tsx`
+- `/app/page.tsx` (v3 — cinematic is now the landing route)
+- `/app/experience/page.tsx` (permanent redirect to `/`)
 - `/components/experience/SmoothScroll.tsx`
 - `/components/experience/SilkExperience.tsx`
-- `/components/experience/art/{GiftBox, BaklavaStack, LightBeams, GoldParticles, NinePieceTray, BrandingSleeve, DedicationCard}.tsx`
+- `/components/experience/ExperienceFollowOn.tsx` (after-cinematic featured collection + story split)
+- `/components/experience/art/{GiftBox, BaklavaStack, LightBeams, GoldParticles, NinePieceTray, BrandingSleeve, DedicationCard, RealBox}.tsx`
 
-**Added to nav** under *Experience* (first item, before *Corporate*).
+**Photorealistic render swap path:**
 
-The route is live the moment `npm install && npm run dev` runs.
+`art/RealBox.tsx` is a drop-in `<Image />` swap. When a 3D artist delivers a photoreal PNG render of the keepsake box (with transparent background), save it to `/public/products/silk-box-hero.png` and replace the `<GiftBox />` instance inside `SilkExperience.tsx`:
+
+```tsx
+// before
+<GiftBox lidOpen={lidOpen} rotate={boxRotate} className="w-full" />
+
+// after — real photoreal PNG render
+<RealBox
+  src="/products/silk-box-hero.png"
+  alt="The Silk keepsake box"
+  lidOpen={lidOpen}
+  rotate={boxRotate}
+  className="w-full"
+/>
+```
+
+The full render brief — camera angle, lighting setup, material spec, file format — is documented at the top of `art/RealBox.tsx`. Hand the file to your 3D artist as-is.
+
+**The route is live the moment `npm install && npm run dev` runs.**

@@ -67,7 +67,7 @@ export function Nav() {
           >
             Contact
           </ButtonLink>
-          <ButtonLink href="/corporate" variant="primary" size="sm" arrow>
+          <ButtonLink href="/collection" variant="primary" size="sm" arrow>
             Send a Gift
           </ButtonLink>
           <button

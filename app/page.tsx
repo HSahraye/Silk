@@ -1,37 +1,20 @@
-import { Hero } from '@/components/sections/Hero';
-import { WhyRemember } from '@/components/sections/WhyRemember';
-import { TasteProfile } from '@/components/sections/TasteProfile';
-import { TheMoment } from '@/components/sections/TheMoment';
-import { SilkStandard } from '@/components/sections/SilkStandard';
-import { WhySilk } from '@/components/sections/WhySilk';
-import { CorporateBand } from '@/components/sections/CorporateBand';
-import { HowItWorks } from '@/components/sections/HowItWorks';
-import { CTA } from '@/components/sections/CTA';
+import type { Metadata } from 'next';
+import { SmoothScroll } from '@/components/experience/SmoothScroll';
+import { SilkExperience } from '@/components/experience/SilkExperience';
+import { ExperienceFollowOn } from '@/components/experience/ExperienceFollowOn';
 
-/**
- * Homepage flow — desire-first.
- *   Hero            : sells the feeling, surfaces price + both CTAs
- *   WhyRemember     : emotional why
- *   TasteProfile    : sensory why
- *   TheMoment       : editorial gifting scenarios (replaces placeholder testimonials)
- *   SilkStandard    : the craft, demoted to justification
- *   WhySilk         : rational comparison, kept for the analytical reader
- *   CorporateBand   : the B2B door
- *   HowItWorks      : the simple promise
- *   CTA             : send a gift, primary
- */
+export const metadata: Metadata = {
+  title: 'Silk — Luxury corporate baklava gifting',
+  description:
+    'A scroll-driven tour of the Silk gifting moment — from architectural baklava to the dedication card placed inside the box.',
+  alternates: { canonical: '/' },
+};
+
 export default function HomePage() {
   return (
-    <>
-      <Hero />
-      <WhyRemember />
-      <TasteProfile />
-      <TheMoment />
-      <SilkStandard />
-      <WhySilk />
-      <CorporateBand />
-      <HowItWorks />
-      <CTA />
-    </>
+    <SmoothScroll>
+      <SilkExperience />
+      <ExperienceFollowOn />
+    </SmoothScroll>
   );
 }

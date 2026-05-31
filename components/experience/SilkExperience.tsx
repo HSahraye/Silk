@@ -280,14 +280,17 @@ export function SilkExperience() {
             folded the layers.
           </p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-            <ButtonLink href="/contact?type=corporate" size="lg" arrow>
-              Request a Corporate Proposal
+            <ButtonLink href="/collection" size="lg" arrow>
+              Shop the Collection
             </ButtonLink>
-            <ButtonLink href="/contact?type=retail" variant="secondary" size="lg">
-              Send a Single Gift
+            <ButtonLink href="/corporate" variant="secondary" size="lg">
+              Corporate Proposals
             </ButtonLink>
           </div>
         </motion.div>
+
+        {/* Skip intro — top-right, fades after scene 1 */}
+        <SkipIntro progress={progress} />
 
         {/* Scroll affordance — fades after first scene */}
         <ScrollHint progress={progress} />
@@ -327,6 +330,19 @@ function SceneCopy({
       <h2 className="mt-4 font-display text-display-xl text-ink balance">{title}</h2>
       <p className="mx-auto mt-5 max-w-xl text-ink-muted pretty">{sub}</p>
     </motion.div>
+  );
+}
+
+function SkipIntro({ progress }: { progress: MotionValue<number> }) {
+  const opacity = useTransform(progress, [0, 0.08, 0.16], [1, 1, 0]);
+  return (
+    <motion.a
+      href="/collection"
+      style={{ opacity }}
+      className="absolute right-5 top-20 z-[40] rounded-full border border-line bg-bg-raised/70 px-3.5 py-1.5 text-xs text-ink-muted backdrop-blur transition-colors hover:text-ink sm:right-6"
+    >
+      Skip the intro →
+    </motion.a>
   );
 }
 
