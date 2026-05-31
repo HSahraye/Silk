@@ -18,6 +18,7 @@ export const SITE = {
 } as const;
 
 export const NAV = [
+  { label: 'Experience', href: '/experience' },
   { label: 'Corporate', href: '/corporate' },
   { label: 'Subscriptions', href: '/subscriptions' },
   { label: 'Our Process', href: '/process' },
