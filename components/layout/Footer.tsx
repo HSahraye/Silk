@@ -78,7 +78,7 @@ export function Footer() {
               <div className="eyebrow mb-4">{col.title}</div>
               <ul className="space-y-2.5">
                 {col.links.map((l) => (
-                  <li key={l.href}>
+                  <li key={l.label}>
                     <Link
                       href={l.href}
                       className="text-sm text-ink-muted transition-colors hover:text-ink"
