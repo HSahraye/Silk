@@ -345,7 +345,7 @@ function ScrollHint({ progress }: { progress: MotionValue<number> }) {
           transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
         />
       </div>
-      <div className="mt-2 text-[10px] uppercase tracking-[0.3em] text-ink-subtle">
+      <div className="mt-2 text-[10px] uppercase tracking-[0.3em] text-ink-muted">
         Scroll
       </div>
     </motion.div>
